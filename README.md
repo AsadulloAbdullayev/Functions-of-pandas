@@ -44,9 +44,11 @@ This repository is dedicated to the most commonly used functions of the pandas l
 ### 6. Grouping and Aggregation Functions
 - `df.groupby()`: Group data.
 - `df.agg()`: Compute aggregates like sum, mean, etc.
-- `df.pivot_table()`: Create a pivot table.
 - `df.crosstab()`: Create a cross-tabulation table between two columns.
 - `df.value_counts()`: Count the frequency of values in a column.
+- `df.aggregate(['sum', 'mean'])`: Apply multiple aggregation functions.
+- `df.transform()`: Transform data.
+- `df.pipe()`: Apply functions sequentially.
 
 ### 7. Statistical Functions
 - `df.mean()`: Calculate the mean value.
@@ -85,13 +87,12 @@ This repository is dedicated to the most commonly used functions of the pandas l
 - `df.reset_index()`: Reset the index.
 - `df.reindex()`: Reindex the DataFrame.
 - `df.index.name`: Change or retrieve index name.
-- `df.index.astype()`: Change the data type of the index.
+
 
 ### 13. Selection and Manipulation of Elements
 - `df.pop()`: Extract a column and return it.
 - `df.sample()`: Randomly select rows.
-- `df.at[]`: Access or set a value at a specific row and column.
-- `df.iat[]`: Access or set a value using integer indices.
+
 
 ### 14. Mathematical and Logical Operations
 - `df.add(), df.sub(), df.mul(), df.div()`: Perform addition, subtraction, multiplication, and division.
@@ -155,7 +156,6 @@ This repository is dedicated to the most commonly used functions of the pandas l
 - `df.sparse.density`: Check the density of sparse data.
 
 ### 23. MultiIndex Operations. Pivot and Reshape Functions
-- `df.set_index([‘col1’, ‘col2’])`: Set multiple columns as index.
 - `df.unstack()`: Unstack a level of index.
 - `df.stack()`: Stack a level of columns.
 - `df.swaplevel()`: Swap levels of a MultiIndex.
@@ -177,38 +177,26 @@ This repository is dedicated to the most commonly used functions of the pandas l
 - `df.mad()`: Mean absolute deviation.
 - `df.sem()`: Standard error of the mean.
 
-### 26. Pivot and Reshape Functions
-- `df.pivot()`: Reshape DataFrame.
-- `df.pivot_table()`: Create pivot table with aggregation.
-- `df.stack()`: Pivot columns to rows.
-- `df.unstack()`: Pivot rows to columns.
-- `df.melt()`: Convert wide format to long format.
-
 ### 27. Working with NaN and NULL
 - `df.notna()`: Check for non-NaN values.
 - `df.isnull()`: Check for NaN values.
 - `df.dropna(axis=1, thresh=2)`: Drop columns with less than 2 non-NaN values.
 - `df.interpolate()`: Fill NaN values by interpolation.
 
-### 28. Advanced Data Aggregation
-- `df.aggregate(['sum', 'mean'])`: Apply multiple aggregation functions.
-- `df.transform()`: Transform data.
-- `df.pipe()`: Apply functions sequentially.
-
-### 29. Checking DataFrame Structure and Object Types
+### 28. Checking DataFrame Structure and Object Types
 - `df.empty`: Check if DataFrame is empty.
 - `df.size`: Get the number of elements.
 - `df.ndim`: Get the number of dimensions.
 - `df.dtypes`: Show data types of columns.
 - `df.memory_usage(deep=True)`: Show memory usage in detail.
 
-### 30. Working with JSON, XML, and Other Formats
+### 29. Working with JSON, XML, and Other Formats
 - `pd.read_json()`: Read data from JSON format.
 - `df.to_json()`: Save DataFrame to JSON format.
 - `pd.read_html()`: Read tables from HTML.
 - `pd.read_xml()`: Read data from XML format.
 
-### 31. Other Utility Functions
+### 30. Other Utility Functions
 - `df.eval()`: Perform expressions on DataFrame.
 - `df.query()`: Perform SQL-like queries on DataFrame.
 - `pd.get_dummies()`: One-hot encoding.
@@ -216,77 +204,73 @@ This repository is dedicated to the most commonly used functions of the pandas l
 - `pd.interval_range()`: Create an interval range.
 - `df.equals()`: Check if two DataFrames are equal.
 
-### 32. Diagnosis and Diagnostic Functions
+### 31. Diagnosis and Diagnostic Functions
 - `pd.show_versions()`: Show versions of pandas and its dependencies.
 - `pd.get_option(), pd.set_option()`: Get and set pandas options.
 - `pd.reset_option()`: Reset pandas options to defaults.
 - `pd.describe_option()`: Show all available parameter options.
 - `df.memory_usage()`: Get memory usage of a DataFrame.
 
-### 33. Advanced Category Handling
+### 32. Advanced Category Handling
 - `df['column'].cat.set_categories()`: Set specific categories.
 - `df['column'].cat.as_ordered()`: Set category as ordered.
 - `df['column'].cat.reorder_categories()`: Reorder categories.
 - `df['column'].cat.remove_unused_categories()`: Remove unused categories.
 
-### 34. Profiling and Data Statistics
+### 33. Profiling and Data Statistics
 - `pd.util.testing.assert_frame_equal()`: Test if two DataFrames are equal.
 - `pd.util.testing.assert_series_equal()`: Test if two Series are equal.
 - `df.profile_report()`: Create a comprehensive profile report.
 
-### 35. Data Quality Checking and Cleaning
+### 34. Data Quality Checking and Cleaning
 - `df.isin()`: Check DataFrame against given values.
 - `df.eval()`: Efficiently evaluate expressions on DataFrame.
 - `df.mask()`: Hide or transform values based on condition.
-- `df.query()`: Perform SQL-like conditions on DataFrame.
 - `pd.to_numeric()`: Convert to numeric type.
 
-### 36. Working with Large DataFrames
+### 35. Working with Large DataFrames
 - `df.memory_usage(deep=True)`: Show memory usage.
 - `pd.read_csv(chunksize=n)`: Read large CSV files in chunks.
 - `pd.concat()`: Concatenate large DataFrames.
 - `df.to_parquet(), pd.read_parquet()`: Save and read data in Parquet format.
 
-### 37. Advanced Sparse Data Handling
+### 36. Advanced Sparse Data Handling
 - `pd.arrays.SparseArray()`: Create sparse arrays.
 - `pd.SparseDataFrame()`: Create DataFrame for sparse data.
 - `df.sparse.from_dense()`: Convert dense to sparse DataFrame.
 - `df.sparse.to_dense()`: Convert sparse to dense.
 
-### 38. Working with Interval Values
+### 37. Working with Interval Values
 - `pd.Interval()`: Define a single interval.
 - `pd.IntervalIndex()`: Create an index of intervals.
 - `pd.cut()`: Bin values into intervals.
 - `pd.qcut()`: Quantile-based discretization.
 
-### 39. Advanced Numeric Functions
-- `pd.to_numeric()`: Convert data to numeric type.
+### 38. Advanced Numeric Functions
 - `pd.Series.rank()`: Rank values in Series.
 - `df.corrwith()`: Compute correlation with another Series or DataFrame.
 - `df.rank()`:: Rank the DataFrame values.
 
-### 40. Advanced Merging and Join Operations
+### 39. Advanced Merging and Join Operations
 - `pd.merge_ordered()`: Ordered merge of two DataFrames.
 - `pd.merge_asof()`: Merge based on closest match.
 - `df.update()`: Update DataFrame values with new ones.
 
-### 41. Transformation and Normalization Functions
+### 40. Transformation and Normalization Functions
 - `df.transform()`: Apply a function to columns.
 - `df.applymap()`: Apply a function to each element.
-- `pd.get_dummies()`: One-hot encoding.
 - `df.clip(lower, upper)`: Clip values within a specified range.
 - `pd.factorize()`: Encode categorical values.
 
-### 42. Event Counting and Statistics
+### 41. Event Counting and Statistics
 - `pd.crosstab()`: Cross table of frequency counts.
 - `df.value_counts()`: Frequency counts of values in a Series.
-- `pd.pivot_table()`: Create a pivot table with aggregation.
 
-### 43. Vectorization Functions
+### 42. Vectorization Functions
 - `df.apply(np.vectorize(function))`: Apply a function element-wise.
 - `df.applymap(np.vectorize(function))`: Apply a function to each DataFrame element.
 
-### 44. Diagnostics and DataFrame Creation Functions
+### 43. Diagnostics and DataFrame Creation Functions
 - `pd.util.hash_pandas_object()`: Hash a DataFrame or Series.
 - `pd.array()`: Create a pandas array.
 - `pd.interval_range()`: Create an interval index range.
