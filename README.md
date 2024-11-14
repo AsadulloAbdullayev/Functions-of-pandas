@@ -46,7 +46,6 @@ This repository is dedicated to the most commonly used functions of the pandas l
 - `df.agg()`: Compute aggregates like sum, mean, etc.
 - `df.crosstab()`: Create a cross-tabulation table between two columns.
 - `df.value_counts()`: Count the frequency of values in a column.
-- `df.aggregate(['sum', 'mean'])`: Apply multiple aggregation functions.
 - `df.transform()`: Transform data.
 - `df.pipe()`: Apply functions sequentially.
 
