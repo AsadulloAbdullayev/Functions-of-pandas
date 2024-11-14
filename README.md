@@ -162,7 +162,6 @@ This repository is dedicated to the most commonly used functions of the pandas l
 - `df.reorder_levels()`: Reorder levels of a MultiIndex.
 - `df.pivot()`: Reshape DataFrame.
 - `df.pivot_table()`: Create pivot table with aggregation.
-- `df.melt()`: Convert wide format to long format.
 - - `df.xs()`: Select a cross-section from a DataFrame.
 
 ### 24. Window Functions
@@ -179,7 +178,6 @@ This repository is dedicated to the most commonly used functions of the pandas l
 ### 27. Working with NaN and NULL
 - `df.notna()`: Check for non-NaN values.
 - `df.isnull()`: Check for NaN values.
-- `df.dropna(axis=1, thresh=2)`: Drop columns with less than 2 non-NaN values.
 - `df.interpolate()`: Fill NaN values by interpolation.
 
 ### 28. Checking DataFrame Structure and Object Types
@@ -230,7 +228,6 @@ This repository is dedicated to the most commonly used functions of the pandas l
 ### 35. Working with Large DataFrames
 - `df.memory_usage(deep=True)`: Show memory usage.
 - `pd.read_csv(chunksize=n)`: Read large CSV files in chunks.
-- `pd.concat()`: Concatenate large DataFrames.
 - `df.to_parquet(), pd.read_parquet()`: Save and read data in Parquet format.
 
 ### 36. Advanced Sparse Data Handling
@@ -242,8 +239,6 @@ This repository is dedicated to the most commonly used functions of the pandas l
 ### 37. Working with Interval Values
 - `pd.Interval()`: Define a single interval.
 - `pd.IntervalIndex()`: Create an index of intervals.
-- `pd.cut()`: Bin values into intervals.
-- `pd.qcut()`: Quantile-based discretization.
 
 ### 38. Advanced Numeric Functions
 - `pd.Series.rank()`: Rank values in Series.
@@ -256,20 +251,15 @@ This repository is dedicated to the most commonly used functions of the pandas l
 - `df.update()`: Update DataFrame values with new ones.
 
 ### 40. Transformation and Normalization Functions
-- `df.transform()`: Apply a function to columns.
 - `df.applymap()`: Apply a function to each element.
 - `df.clip(lower, upper)`: Clip values within a specified range.
 - `pd.factorize()`: Encode categorical values.
 
-### 41. Event Counting and Statistics
-- `pd.crosstab()`: Cross table of frequency counts.
-- `df.value_counts()`: Frequency counts of values in a Series.
-
-### 42. Vectorization Functions
+### 41. Vectorization Functions
 - `df.apply(np.vectorize(function))`: Apply a function element-wise.
 - `df.applymap(np.vectorize(function))`: Apply a function to each DataFrame element.
 
-### 43. Diagnostics and DataFrame Creation Functions
+### 42. Diagnostics and DataFrame Creation Functions
 - `pd.util.hash_pandas_object()`: Hash a DataFrame or Series.
 - `pd.array()`: Create a pandas array.
 - `pd.interval_range()`: Create an interval index range.
