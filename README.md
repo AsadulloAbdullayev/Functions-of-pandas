@@ -69,7 +69,6 @@ This repository is dedicated to the most commonly used functions of the pandas l
 - `df.asfreq()`: Convert data to a different frequency.
 
 ### 10. Working with Datetime
-- `pd.to_datetime(df['date_column'])`: Convert to datetime type.
 - `df['date'].dt.year, df['date'].dt.month, df['date'].dt.day`: Extract year, month, or day from date.
 - `df['date'].dt.weekday`: Get the day of the week.
 - `df['date'].dt.is_month_end`: Check if it's the end of the month.
