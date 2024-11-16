@@ -66,7 +66,6 @@ This repository is dedicated to the most commonly used functions of the pandas l
 ### 9. Time and Date Management
 - `pd.to_datetime()`: Convert data to datetime type.
 - `df.resample()`: Resample time-series data.
-- `df.asfreq()`: Convert data to a different frequency.
 
 ### 10. Working with Datetime
 - `df['date'].dt.year, df['date'].dt.month, df['date'].dt.day`: Extract year, month, or day from date.
