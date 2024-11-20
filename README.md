@@ -85,12 +85,6 @@ This repository is dedicated to the most commonly used functions of the pandas l
 - `df.reindex()`: Reindex the DataFrame.
 - `df.index.name`: Change or retrieve index name.
 
-
-### 13. Selection and Manipulation of Elements
-- `df.pop()`: Extract a column and return it.
-- `df.sample()`: Randomly select rows.
-
-
 ### 14. Mathematical and Logical Operations
 - `df.add(), df.sub(), df.mul(), df.div()`: Perform addition, subtraction, multiplication, and division.
 - `df.abs()`: Get absolute values.
