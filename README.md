@@ -108,7 +108,6 @@ This repository is dedicated to the most commonly used functions of the pandas l
 - `df.expanding()`: Create expanding statistics.
 
 ### 16. Time Series Functions
-- `df.tshift()`: Shift time.
 - `df.asof()`: Get the value closest to a specified date.
 - `df.shift()`: Shift rows or columns.
 - `df.diff()`: Calculate the difference.
