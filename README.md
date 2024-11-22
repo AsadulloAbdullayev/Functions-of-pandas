@@ -159,7 +159,7 @@ This repository is dedicated to the most commonly used functions of the pandas l
 - `pd.get_option(), pd.set_option()`: Get and set pandas options.
 - `pd.reset_option()`: Reset pandas options to defaults.
 - `pd.describe_option()`: Show all available parameter options.
-- `df.memory_usage()`: Get memory usage of a DataFrame.
+
 
 ### 24. Advanced Category Handling
 - `df['column'].cat.set_categories()`: Set specific categories.
